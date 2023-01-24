@@ -1,0 +1,24 @@
+*.a
+*.lib
+*.so
+.DS_Store
+/out/
+/docs/html
+
+# CMake
+build
+
+# Visual Studio
+*.opendb
+*.opensdf
+*.pdb
+*.sdf
+*.sln.docstates
+*.suo
+*.user
+*.userosscache
+.vs/
+ipch/
+
+# Visual Studio Code
+.vscode/
