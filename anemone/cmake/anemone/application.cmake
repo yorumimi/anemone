@@ -5,10 +5,13 @@ target_sources(anemone_static PRIVATE
     # NOTE: application
     ${ANEMONE_SRC_DIR}/application/Window.hpp
     ${ANEMONE_SRC_DIR}/application/Window.cpp
+    ${ANEMONE_SRC_DIR}/application/WindowState.h
 
     $<$<PLATFORM_ID:Windows>:
         # NOTE: platform/win32
         ${ANEMONE_SRC_DIR}/application/win32/WindowWin32.hpp
         ${ANEMONE_SRC_DIR}/application/win32/WindowWin32.cpp
+        ${ANEMONE_SRC_DIR}/application/win32/GameHostWin32.hpp
+        ${ANEMONE_SRC_DIR}/application/win32/GameHostWin32.cpp
     >
 )

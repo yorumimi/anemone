@@ -2,7 +2,7 @@
 
 #include "anemone/application/Window.hpp"
 #include "anemone/basic/ConditionalCompilation.h"
-#include "anemone/platform/PrerequisiteWin32.h"
+#include "anemone/platform/win32/PrerequisiteWin32.h"
 
 ANEMONE_SUPPRESS_WARNINGS_GENERATED_BY_STD_HEADERS_BEGIN
 #include <memory>
@@ -18,7 +18,7 @@ public:
   ~WindowWin32();
 
   void SetTitle(const std::string& title) override;
-  [[nodiscard]] std::string GetTitle() const override;
+  [[nodiscard]] const std::string& GetTitle() const override;
 
   void Close();
 

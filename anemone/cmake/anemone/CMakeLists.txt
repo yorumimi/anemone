@@ -14,6 +14,7 @@ set(ANEMONE_USE_EXPERIMENTAL true CACHE BOOL "Use Experimental")
 add_library(anemone_static STATIC)
 include(application.cmake)
 include(basic.cmake)
+include(platform.cmake)
 
 set_target_properties(anemone_static PROPERTIES
     CXX_STANDARD 20
