@@ -26,3 +26,8 @@ target_include_directories(anemone_static PRIVATE
     ${ANEMONE_DIR}
     ${ANEMONE_DIR}/dependencies
 )
+
+set_target_properties(${PRODUCT_NAME} PROPERTIES
+    # Change working directory in Visual Studio
+    VS_DEBUGGER_WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
+)

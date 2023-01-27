@@ -105,6 +105,11 @@ WindowWin32::~WindowWin32()
   }
 }
 
+bool WindowWin32::Initialize()
+{
+  return false;
+}
+
 void WindowWin32::SetTitle(const std::string& title)
 {
   impl->SetTitle(title);

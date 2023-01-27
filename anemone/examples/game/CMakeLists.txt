@@ -23,7 +23,7 @@ set_target_properties(${PRODUCT_NAME} PROPERTIES
 )
 
 target_compile_definitions(${PRODUCT_NAME} PRIVATE
-    $<$<CONFIG:Debug>:_DEBUG;POMDOG_DEBUG_BUILD=1>
+    $<$<CONFIG:Debug>:_DEBUG;ANEMONE_DEBUG_BUILD=1>
     $<$<CONFIG:Release>:NDEBUG>
 
     # On Windows
@@ -33,6 +33,13 @@ target_compile_definitions(${PRODUCT_NAME} PRIVATE
     >
 )
 
+set_target_properties(${PRODUCT_NAME} PROPERTIES
+    # Change working directory in Visual Studio
+    VS_DEBUGGER_WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
+)
+
 if(NOT ANEMONE_BUILD_TARGET_ALL)
     add_subdirectory(${ANEMONE_DIR}/cmake/anemone ${CMAKE_CURRENT_BINARY_DIR}/anemone_build)
 endif()
+
+target_link_libraries(${PRODUCT_NAME} anemone_static)

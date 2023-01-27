@@ -17,6 +17,8 @@ public:
 
   ~WindowWin32();
 
+  bool Initialize();
+
   void SetTitle(const std::string& title) override;
   [[nodiscard]] const std::string& GetTitle() const override;
 
