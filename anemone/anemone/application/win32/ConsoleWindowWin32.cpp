@@ -24,6 +24,11 @@ ConsoleWindowWin32::~ConsoleWindowWin32()
 {
   fclose(fp);
   FreeConsole();
+
+  if (fp != nullptr)
+  {
+    fp = nullptr;
+  }
 }
 
 }  // namespace anemone::detail::win32
