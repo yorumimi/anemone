@@ -11,6 +11,8 @@ public:
 
   ~RunnerWin32();
 
+  void Initialize();
+
   void Run();
 
 private:
