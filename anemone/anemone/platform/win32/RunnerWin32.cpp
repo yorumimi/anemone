@@ -29,6 +29,9 @@ void RunnerWin32::Initialize()
 void RunnerWin32::Run()
 {
   auto consoleWindow = std::make_unique<detail::win32::ConsoleWindowWin32>();
+  auto window = std::make_unique<detail::win32::WindowWin32>();
+
+
 }
 
 }  // namespace anemone

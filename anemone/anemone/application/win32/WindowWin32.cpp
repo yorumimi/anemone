@@ -76,7 +76,7 @@ LRESULT CALLBACK WindowWin32::Impl::WindowProcedure(const HWND windowHandle,
                                                     const WPARAM wParam,
                                                     LPARAM lParam)
 {
-  // auto window = reinterpret_cast<WindowWin32::Impl*>(::GetWindowLongPtr(hWnd, GWLP_USERDATA));
+  auto window = reinterpret_cast<WindowWin32::Impl*>(::GetWindowLongPtr(windowHandle, GWLP_USERDATA));
 
   switch (message)
   {

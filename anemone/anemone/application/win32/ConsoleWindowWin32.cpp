@@ -14,8 +14,7 @@ ConsoleWindowWin32::ConsoleWindowWin32()
 {
   AllocConsole();
   freopen_s(&fp, "CON", "w", stdout);
-
-  // NOTE: コンソールを先に終了するとリークするので
+  
   HMENU hmenu = GetSystemMenu(GetConsoleWindow(), FALSE);
   RemoveMenu(hmenu, SC_CLOSE, MF_BYCOMMAND);
 }
